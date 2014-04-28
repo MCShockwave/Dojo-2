@@ -162,6 +162,7 @@ public class DefaultListener implements Listener {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
 		Entity ee = event.getEntity();
@@ -229,7 +230,7 @@ public class DefaultListener implements Listener {
 		// event.setDeathMessage("");
 		PlayerRespawnEvent pre = new PlayerRespawnEvent(p, p.getWorld().getSpawnLocation(), false);
 		Bukkit.getPluginManager().callEvent(pre);
-		p.setHealth(20);
+		p.setHealth(20f);
 		p.setNoDamageTicks(40);
 		p.setVelocity(new Vector());
 		p.teleport(pre.getRespawnLocation());
@@ -266,7 +267,7 @@ public class DefaultListener implements Listener {
 			}
 
 			if (event.getCause() == DamageCause.VOID) {
-				event.setDamage(20);
+				event.setDamage(20f);
 			}
 		}
 	}

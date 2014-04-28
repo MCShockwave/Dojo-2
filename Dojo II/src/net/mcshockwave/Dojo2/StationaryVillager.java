@@ -1,7 +1,7 @@
 package net.mcshockwave.Dojo2;
 
-import net.minecraft.server.v1_7_R1.EntityVillager;
-import net.minecraft.server.v1_7_R1.World;
+import net.minecraft.server.v1_7_R2.EntityVillager;
+import net.minecraft.server.v1_7_R2.World;
 
 public class StationaryVillager extends EntityVillager {
 

@@ -148,7 +148,7 @@ public enum Mat {
 
 		for (Player p : ps) {
 			p.teleport(spawns[ps.indexOf(p)].l2);
-			p.setHealth(20);
+			p.setHealth(20f);
 		}
 
 		timeGrace = System.currentTimeMillis() + 5000;
@@ -160,7 +160,7 @@ public enum Mat {
 		for (Player p : ps.toArray(new Player[0])) {
 			ps.remove(p);
 			p.teleport(spawns[0].l1);
-			p.setHealth(20);
+			p.setHealth(20f);
 		}
 
 		updateSlots();
