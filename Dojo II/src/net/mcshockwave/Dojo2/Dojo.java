@@ -9,6 +9,7 @@ import net.mcshockwave.MCS.Utils.CustomSignUtils.SignRunnable;
 import net.mcshockwave.MCS.Utils.LocUtils;
 import net.mcshockwave.MCS.Utils.PacketUtils;
 import net.mcshockwave.MCS.Utils.SchedulerUtils;
+import net.minecraft.server.v1_7_R2.EntityVillager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -47,7 +48,8 @@ public class Dojo extends JavaPlugin {
 			public void run() {
 				dw().setSpawnLocation(-66, 43, -74);
 
-				CustomEntityRegistrar.addCustomEntity(StationaryVillager.class, "Villager", EntityType.VILLAGER);
+				CustomEntityRegistrar.addCustomEntity("Villager", EntityType.VILLAGER, EntityVillager.class,
+						StationaryVillager.class);
 				StationaryVillager tut = (StationaryVillager) CustomEntityRegistrar.spawnCustomEntity(
 						StationaryVillager.class, new Location(dw(), -66.5, 50, -91.5, 0, 30));
 				tut.setCustomName("Tutorial Villager");
@@ -164,7 +166,7 @@ public class Dojo extends JavaPlugin {
 						public void run() {
 							for (Location l : circle) {
 								Location m = l.clone().add(0, -j, 0);
-								
+
 								PacketUtils.playBlockDustParticles(Material.FIRE, 0, m, 0, 0.1f);
 							}
 						}
@@ -172,7 +174,7 @@ public class Dojo extends JavaPlugin {
 					util.add(2);
 				}
 				util.add(2);
-				
+
 				util.add(new Runnable() {
 					public void run() {
 						loc.getWorld().strikeLightningEffect(loc);
