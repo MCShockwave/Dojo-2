@@ -9,7 +9,7 @@ import net.mcshockwave.MCS.Utils.CustomSignUtils.SignRunnable;
 import net.mcshockwave.MCS.Utils.LocUtils;
 import net.mcshockwave.MCS.Utils.PacketUtils;
 import net.mcshockwave.MCS.Utils.SchedulerUtils;
-import net.minecraft.server.v1_7_R2.EntityVillager;
+import net.minecraft.server.v1_7_R4.EntityVillager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
