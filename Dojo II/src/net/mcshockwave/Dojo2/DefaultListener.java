@@ -162,7 +162,6 @@ public class DefaultListener implements Listener {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
 	@EventHandler
 	public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
 		Entity ee = event.getEntity();
