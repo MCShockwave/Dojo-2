@@ -167,7 +167,7 @@ public class Dojo extends JavaPlugin {
 							for (Location l : circle) {
 								Location m = l.clone().add(0, -j, 0);
 
-								PacketUtils.playBlockDustParticles(Material.FIRE, 0, m, 0, 0.1f);
+								PacketUtils.playBlockParticles(Material.FIRE, 0, m);
 							}
 						}
 					});

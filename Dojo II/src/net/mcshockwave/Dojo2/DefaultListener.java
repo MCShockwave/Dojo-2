@@ -131,12 +131,15 @@ public class DefaultListener implements Listener {
 	public void onPlayerJoin(PlayerJoinEvent event) {
 		Player p = event.getPlayer();
 
-		if (p.getGameMode() != GameMode.ADVENTURE) {
-			p.setGameMode(GameMode.ADVENTURE);
-		}
+		// temp
+		if (p.getGameMode() != GameMode.CREATIVE) {
+			if (p.getGameMode() != GameMode.ADVENTURE) {
+				p.setGameMode(GameMode.ADVENTURE);
+			}
 
-		p.teleport(TutorialClass.tutMid);
-		Dojo.resetPlayer(p);
+			p.teleport(TutorialClass.tutMid);
+			Dojo.resetPlayer(p);
+		}
 	}
 
 	@EventHandler
@@ -277,11 +280,9 @@ public class DefaultListener implements Listener {
 		Button ability = new Button(false, Material.DIAMOND, 1, 0, "Abilities", "Click to select", "",
 				"Abilities are activated with §oSHIFT");
 		m.addButton(ability, 4);
-		
+
 		ItemMenu abs = new ItemMenu("Abilities - " + p.getName(), 9);
 		m.addSubMenu(abs, ability, true);
-		
-		
 
 		return m;
 	}
